@@ -1,6 +1,6 @@
 'use strict';
 
-// Definimos el array de asignaturas
+
 let asignaturas = [
     { asignatura: 'Matematica computacional', nivel: 1 },
     { asignatura: 'Metodologías para resolver problemas informáticos', nivel: 1 },
@@ -38,27 +38,18 @@ let asignaturas = [
     { asignatura: 'Prácticas laborales', nivel: 4 }
 ];
 
-// Definimos la función que recibe el array de asignaturas y el nivel
 function Asignaturas(asignaturas, nivel) {
-    // Creamos un nuevo array para almacenar las asignaturas filtradas
     let asignaturasFiltradas = [];
 
-    // Utilizamos el bucle for tradicional para recorrer el array de asignaturas
     for (let i = 0; i < asignaturas.length; i++) {
-        // Verificamos si el nivel de la asignatura coincide con el nivel proporcionado
         if (asignaturas[i].nivel === nivel) {
-            // Si coincide, agregamos la asignatura al array de asignaturas filtradas
             asignaturasFiltradas.push(asignaturas[i]);
         }
     }
 
-    // Retornamos el array de asignaturas filtradas
     return asignaturasFiltradas;
 }
-
-// Ejemplo de uso de la función
 let nivel = 2;
 let asignaturasDelNivel = Asignaturas(asignaturas, nivel);
-// Crear una cadena de texto personalizada para mostrar en el alert
 let mensaje = asignaturasDelNivel.map(a => `${a.asignatura} (Nivel ${a.nivel})`).join('\n');
 alert(mensaje);
