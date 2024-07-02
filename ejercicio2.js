@@ -9,13 +9,17 @@ let asignaturas = [
     { asignatura: 'Programación de interfaces gráficas y estructura de datos', nivel: 1 },
     { asignatura: 'Proyecto integrador de saberes: creación de aplicaciones de escritorio', nivel: 1 },
     { asignatura: 'Prácticas de servicio comunitario', nivel: 1 },
-    { asignatura: 'Matematica computacional', nivel: 2 },
-    { asignatura: 'Metodologías para resolver problemas informáticos', nivel: 2 },
-    { asignatura: 'Base de datos relacionales', nivel: 2 },
-    { asignatura: 'Las tics y soporte en hardware', nivel: 2 },
-    { asignatura: 'Programación de interfaces gráficas y estructura de datos', nivel: 2 },
+
+    
+    { asignatura: 'Sistemas digitales programables', nivel: 2 },
+    { asignatura: 'Sistemas de información', nivel: 2 },
+    { asignatura: 'Programación orientada a objetos', nivel: 2 },
+    { asignatura: 'Procesos contables', nivel: 2 },
+    { asignatura: 'Gestion de base de datos', nivel: 2 },
     { asignatura: 'Proyecto integrador de saberes: creación de aplicaciones de escritorio', nivel: 2 },
     { asignatura: 'Prácticas de servicio comunitario', nivel: 2 },
+
+
     { asignatura: 'Programacion de aplicaciones para dispositivos móviles', nivel: 3 },
     { asignatura: 'Probabilidades y procesos estocásticos', nivel: 3 },
     { asignatura: 'Herramientas informáticas para el despliegue de diagramas', nivel: 3 },
@@ -23,6 +27,8 @@ let asignaturas = [
     { asignatura: 'Software aplicativo', nivel: 3 },
     { asignatura: 'Proyecto integrador de saberes: creación de aplicaciones web con base a la arquitectura cliente servidor', nivel: 3 },
     { asignatura: 'Prácticas laborales', nivel: 3 },
+
+
     { asignatura: 'Comunicaciones y redes de datos', nivel: 4 },
     { asignatura: 'Sistemas operativos', nivel: 4 },
     { asignatura: 'Herramientas case', nivel: 4 },
@@ -33,7 +39,7 @@ let asignaturas = [
 ];
 
 // Definimos la función que recibe el array de asignaturas y el nivel
-function filtrarAsignaturasPorNivel(asignaturas, nivel) {
+function Asignaturas(asignaturas, nivel) {
     // Creamos un nuevo array para almacenar las asignaturas filtradas
     let asignaturasFiltradas = [];
 
@@ -52,6 +58,7 @@ function filtrarAsignaturasPorNivel(asignaturas, nivel) {
 
 // Ejemplo de uso de la función
 let nivel = 2;
-let asignaturasDelNivel = filtrarAsignaturasPorNivel(asignaturas, nivel);
-
-alert(asignaturasDelNivel);
+let asignaturasDelNivel = Asignaturas(asignaturas, nivel);
+// Crear una cadena de texto personalizada para mostrar en el alert
+let mensaje = asignaturasDelNivel.map(a => `${a.asignatura} (Nivel ${a.nivel})`).join('\n');
+alert(mensaje);
